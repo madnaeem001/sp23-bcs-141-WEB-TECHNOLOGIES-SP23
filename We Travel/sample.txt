@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeTravel - BeTheme</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+
+
+</head>
+<body>
+        <div>
+            <header>
+                <div class="Logo"><a href="index.html"><img src="./images/retina-travel.png" alt="BeTravel Logo" ></a></div>
+                <div class="Menu"><ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="insurances.html">Insurances</a></li>
+                <li><a href="helpcenter.html">Help Center</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="buynow.html">Buy Now</a></li>
+            </ul></div>
+                
+            </header>
+            <div>
+                <div>
+                    <h2>Find your Dream Holidays</h2>
+                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.
+
+Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et.</p>
+                        <button>View More</button>
+                </div>
+                <div>
+                    <h2>Sri Lanka</h2>
+                </div>
+                <div>
+                    <h3>Best Price for Value</h3>
+                    <button>Read More</button>
+
+                </div>
+            </div>
+
+            <div>
+                <h2>Last minute Tours</h2>
+                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.
+</p>
+
+            </div>
+            
+
+          
+        </div>
+        <div>
+            <button>600+ websites</button>
+            <button>Buy Now</button>
+        </div>
+</body>
+</html>

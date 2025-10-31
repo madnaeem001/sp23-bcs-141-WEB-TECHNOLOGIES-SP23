@@ -1,0 +1,204 @@
+# CV Page Implementation Guide
+
+## Files Created
+
+### 1. **resumecv.html**
+The main CV page HTML file with:
+- Integrated header and footer from your BeTravel project
+- 5 collapsible sections (Personal Info, Education, Skills, Experience/Projects, Contact)
+- Hover effects that reveal section details
+- Font Awesome icons for visual appeal
+- Bootstrap 5 integration for responsive design
+- JavaScript for toggle functionality
+
+### 2. **cv-styles.css**
+Complete CSS styling file containing:
+- Section heading styles with gradient backgrounds
+- Smooth transitions and animations
+- Responsive grid layouts for skills
+- Experience/project cards with hover effects
+- Contact method cards with icons
+- Mobile-responsive design (768px and 480px breakpoints)
+
+---
+
+## Setup Instructions
+
+### Step 1: Create Folder Structure
+```
+your-project-repo/
+│
+├── midtermlab/
+│   └── resumecv.html
+│
+├── css/
+│   └── style.css (EXISTING - ADD NEW CSS TO THIS)
+│
+├── images/
+│   └── retina-travel.png
+│
+└── [other files]
+```
+
+### Step 2: Add CSS to Your Existing style.css
+Copy all the content from **cv-styles.css** and paste it into your existing **css/style.css** file at the end (after all your existing styles). This ensures all CV styling is applied.
+
+```css
+/* Existing styles from your project... */
+
+/* ============================================================
+   CV PAGE STYLES - Add these to your existing style.css
+   ============================================================ */
+
+/* Copy all styles from cv-styles.css here */
+```
+
+### Step 3: Update Your Navigation Menu
+In your header section (used in other pages), add a link to the CV page:
+
+```html
+<li><a href="resumecv.html">CV</a></li>
+```
+
+or for the midtermlab folder:
+
+```html
+<li><a href="./midtermlab/resumecv.html">CV</a></li>
+```
+
+### Step 4: Customize Content
+Edit the following content in **resumecv.html**:
+
+1. **Personal Information Section**
+   - Replace "Your Full Name" with your actual name
+   - Update email address
+   - Update phone number
+   - Update location
+
+2. **Education Section**
+   - Update degree name and institution
+   - Modify dates
+   - Update description
+
+3. **Skills Section**
+   - Modify skill badges as needed
+   - Add/remove skills based on your experience
+
+4. **Experience/Projects Section**
+   - Replace with your actual projects
+   - Update dates and descriptions
+   - Modify achievements
+
+5. **Contact Information**
+   - Update email, phone, location
+   - Add your GitHub, LinkedIn, Instagram URLs
+
+---
+
+## How It Works
+
+### Click to Expand Sections
+- Only section headings are visible initially
+- Click on any heading to expand/collapse that section
+- Arrow icon rotates 180° when section is expanded
+- Smooth CSS transitions create animation effect
+
+### Hover Effects
+- Section headings change background color on hover
+- Icons and badges scale up on hover
+- Experience cards slide right on hover
+- All transitions are smooth (0.3s - 0.4s duration)
+
+### Color Scheme
+- Primary Color: `#b9cbe6` (Light Blue)
+- Dark Text: `#1a3a52` (Navy Blue)
+- Secondary Text: `#5a7a8d` (Medium Blue-Gray)
+- Accent: `#97aeca` (Medium Blue)
+- Background: White cards on gradient background
+
+---
+
+## Features Included
+
+✅ **Responsive Design** - Works on desktop, tablet, and mobile
+✅ **Smooth Animations** - CSS transitions for expanding sections
+✅ **Icon Integration** - Font Awesome icons for each section
+✅ **Bootstrap Classes** - Responsive grid and spacing
+✅ **Hover Effects** - Interactive elements with visual feedback
+✅ **Professional Layout** - Clean and modern design
+✅ **Accessible** - Proper semantic HTML and keyboard navigation
+✅ **Fast Loading** - Uses CDN for Bootstrap and Font Awesome
+
+---
+
+## Required Files
+- Font Awesome Icons: ✅ Included via CDN
+- Bootstrap 5: ✅ Included via CDN
+- Your project's header/footer HTML: ✅ Included
+- CSS file: ✅ Provided in cv-styles.css
+
+---
+
+## Submission Checklist
+- [ ] Created `midtermlab` folder in your repo
+- [ ] Placed `resumecv.html` in the folder
+- [ ] Added CV styles to your existing `style.css`
+- [ ] Updated all personal information
+- [ ] Tested all expandable sections (hover and click)
+- [ ] Verified responsive design on mobile
+- [ ] Committed and pushed to GitHub before 11:30
+
+---
+
+## Git Commands
+```bash
+# Add your changes
+git add midtermlab/resumecv.html
+
+# Commit your changes
+git commit -m "Add CV page for midterm lab exam"
+
+# Push to repository
+git push origin main
+# or
+git push origin master
+```
+
+---
+
+## Troubleshooting
+
+**Q: Styles not showing?**
+A: Make sure you added the CV styles to your existing `style.css` file in the `css/` folder.
+
+**Q: Header/Footer looks different?**
+A: Adjust the header and footer paths if your project structure is different. The paths should match your existing project setup.
+
+**Q: Sections not expanding?**
+A: Ensure the JavaScript in the HTML file is active (check browser console for errors). Also verify Font Awesome CDN is loading.
+
+**Q: Icons not showing?**
+A: Check browser console - Font Awesome CDN link might be blocked. Consider replacing with unicode characters if needed.
+
+---
+
+## Customization Tips
+
+### Change Color Scheme
+In your `style.css`, find and replace:
+- `#b9cbe6` with your primary color
+- `#1a3a52` with your text color
+- `#5a7a8d` with your secondary text color
+
+### Adjust Animation Speed
+Find `transition: ` properties and change the duration (e.g., `0.3s` to `0.5s`)
+
+### Modify Spacing
+Change `padding`, `margin`, and `gap` values to adjust spacing between elements
+
+### Add More Sections
+Duplicate a section div and change the class names and content accordingly
+
+---
+
+Good luck with your submission! 🎓

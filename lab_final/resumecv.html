@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal CV - BeTravel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+    <!-- HEADER -->
+    <div class="topbar">
+        <div class="topbar_left" style="width: 1128.4px;">
+            <div class="logo" style="background-color: #fff;">
+                <span id="logo" data-height="60" data-padding="15" class="retina" style="background-color: #fff;">
+                    <a href="index.html" style="background-color: #fff;"><img src="./images/retina-travel.png"
+                            alt="BeTravel Logo" style="background-color: #fff;" height="37px"></a>
+                </span>
+            </div>
+            <div class="menu_wrapper">
+                <ul class="menu_top">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resumecv.html" class="active">My CV</a></li>
+                    <li><a href="insurances.html">Insurances</a></li>
+                    <li><a href="helpcenter.html">Help Center</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="topbar_right"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="cv-main-wrapper">
+        <div class="cv-page-header">
+            <h1 class="stylish_h2 cv-main-title">My Professional CV</h1>
+            <p class="cv-subtitle-text">Explore my professional journey and expertise</p>
+        </div>
+        <div class="cv-sections-container">
+            <!-- Personal Information Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-user"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Personal Information</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Name:</span>
+                        <span class="cv-info-value">Mudassar Naeem</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Email:</span>
+                        <span class="cv-info-value"><a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a></span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Phone:</span>
+                        <span class="cv-info-value">+92 329 1630470</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Location:</span>
+                        <span class="cv-info-value">Lahore, Pakistan</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Professional Summary:</span>
+                        <span class="cv-info-value cv-summary-text">
+                          Dedicated Data anlayst and computer science student with passion for creating innovative digital solutions and exploring modern techs.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-graduation-cap"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Education</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-education-item">
+                        <div class="cv-education-header">
+                            <h3 class="cv-degree-title">Bachelor of Science in Computer Science</h3>
+                            <span class="cv-year-badge">2023 - Present</span>
+                        </div>
+                        <p class="cv-institution-name">COMSATS University Islamabad - Lahore Campus</p>
+                        <p class="cv-description">Currently pursuing degree with focus on AI and web-based implementation, and software engineering principles.</p>
+                    </div>
+                    <div class="cv-education-item">
+                        <div class="cv-education-header">
+                            <h3 class="cv-degree-title">Intermediate (F.Sc) Pre-Medical</h3>
+                            <span class="cv-year-badge">2020 - 2022</span>
+                        </div>
+                        <p class="cv-institution-name">Aspire Group of Colleges</p>
+                        <p class="cv-description">Completed intermediate education with strong logical thinking.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-cogs"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Skills</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Web Technologies</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">HTML5</span>
+                            <span class="cv-skill-item">CSS3</span>
+                            <span class="cv-skill-item">Bootstrap</span>
+                            <span class="cv-skill-item">Responsive Design</span>
+                            <span class="cv-skill-item">jQuery</span>
+                        </div>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Programming Languages and libraries</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Python</span>
+                            <span class="cv-skill-item">NASM</span>
+                            <span class="cv-skill-item">TASM</span>
+                            <span class="cv-skill-item">HTML</span>
+                            <span class="cv-skill-item">CSS</span>
+                            <span class="cv-skill-item">Java</span>
+                            <span class="cv-skill-item">C++</span>
+                            <span class="cv-skill-item">PowerBI</span>
+                            <span class="cv-skill-item">NumPY</span>
+                            <span class="cv-skill-item">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Tools & Platforms</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Zapier</span>
+                            <span class="cv-skill-item">VS Code</span>
+                            <span class="cv-skill-item">n8n Automation</span>
+                            <span class="cv-skill-item">Slack</span>
+                            <span class="cv-skill-item">scikit-learn</span>
+                            <span class="cv-skill-item">AI Tools</span>
+                        </div>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Soft Skills</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Problem Solving</span>
+                            <span class="cv-skill-item">Communication</span>
+                            <span class="cv-skill-item">Team Collaboration</span>
+                            <span class="cv-skill-item">Project Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience / Projects Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-briefcase"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Experience / Projects</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">Marketing & Branding Agency</h3>
+                            <span class="cv-year-badge">2025</span>
+                        </div>
+                        <p class="cv-role-title">Founder & Developer</p>
+                        <p class="cv-description">
+                            Established and managed a full-service marketing and branding agency specializing in social media presence, AI-generated content, and client outreach for ecommerce businesses.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Developed AI-generated CGI video content for product marketing</li>
+                            <li>Created social media strategies for client engagement</li>
+                            <li>Built responsive landing pages and portfolio sites</li>
+                        </ul>
+                    </div>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">HostelEase - Flutter Mobile App</h3>
+                            <span class="cv-year-badge">2025</span>
+                        </div>
+                        <p class="cv-role-title">Full-Stack Developer</p>
+                        <p class="cv-description">
+                            Developed a comprehensive hostel management application with Firebase and SQLite backend, enabling roommate grouping, expense tracking, and complaint logging.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Implemented expense splitting functionality</li>
+                            <li>Created mess menu reminder system</li>
+                            <li>Built complaint logging and tracking features</li>
+                        </ul>
+                    </div>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">BeTravel - E-Tourism Website</h3>
+                            <span class="cv-year-badge">2025</span>
+                        </div>
+                        <p class="cv-role-title">Web Developer</p>
+                        <p class="cv-description">
+                            Built a comprehensive travel website with responsive design, multiple service pages, and integrated checkout system.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Designed responsive layout for all device sizes</li>
+                            <li>Created dynamic navigation and menu systems</li>
+                            <li>Implemented form validation and checkout flow</li>
+                        </ul>
+                    </div>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">Nairma - AR</h3>
+                            <span class="cv-year-badge">2025 - Ongoing</span>
+                        </div>
+                        <p class="cv-role-title">Data Analyst and Developer</p>
+                        <p class="cv-description">
+                            <p class="cv-description">
+                                Contributed as a data analytics learner at Nairma, handling small tasks such as cleaning and modelling datasets using Python (pandas, NumPy), preparing AR asset metadata, and assisting with simple REST endpoints. Supported AR integration efforts and helped build Power BI reports to track basic engagement metrics under senior guidance.
+                            </p>
+
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Learned data cleaning and preprocessing techniques</li>
+                            <li>Got a chance to implement basic data visualization using Power BI</li>
+                            <li>Assisted in preparing AR asset metadata</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-envelope"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Contact Information</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-envelope"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Email</h4>
+                            <a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-phone"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Phone</h4>
+                            <a href="tel:+923001234567">+92 329 1630470</a>
+                        </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-map-marker-alt"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Location</h4>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-globe"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Website & Social</h4>
+                            <div class="cv-social-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer">
+        <div class="footer-top">
+            <div class="footer-col left">
+                <img src="./images/footer_logo.png" alt="">
+                <p style="color: #ccc; margin-top: 10px;">We love who we are and we are very proud to be the part of your business</p>
+                <p style="color: #ccc; font-size: 13px; margin-bottom: 10px;">Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque quis.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-vimeo"></i></a>
+                    <a href="#"><i class="fa fa-play"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Bibendum auctor</h3>
+                <ul class="footer-list">
+                    <li>Suspendisse a pellentesque dui, non felis.</li>
+                    <li>Quisque lorem tortor fringilla sed.</li>
+                    <li>Quisque cursus et, porttitor risus.</li>
+                    <li>Nulla ipsum dolor lacus, suscipit.</li>
+                </ul>
+            </div>
+            <div class="footer-col large">
+                <h3>10 years of experience</h3>
+                <p>Suspendisse elementum mauris lectus. Suspendisse potenti. Praesent id ipsum lorem. Ut ac erat sed nisi aliquam molestie vitae et lectus! Duis at enim magna. Nulla in ex purus:</p>
+                <div class="footer-list-row">
+                    <ul>
+                        <li><a href="#" style="color: #ccc;">Velit mauris</a></li>
+                        <li><a href="#" style="color: #ccc;">Entum feuis</a></li>
+                        <li><a href="#" style="color: #ccc;">Aliquam massa</a></li>
+                        <li><a href="#" style="color: #ccc;">Egestas quam</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" style="color: #ccc;">Aenean ligula</a></li>
+                        <li><a href="#" style="color: #ccc;">Dapibus at dolor</a></li>
+                        <li><a href="#" style="color: #ccc;">Molestie id</a></li>
+                        <li><a href="#" style="color: #ccc;">Vestibulum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            2021 Betheme by Muffin group | All Rights Reserved | Powered by <a href="#">WordPress</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(headerElement) {
+            const cardSection = headerElement.closest('.cv-card-section');
+            const body = cardSection.querySelector('.cv-card-body');
+            const arrow = headerElement.querySelector('.cv-toggle-arrow i');
+
+            headerElement.classList.toggle('active');
+
+            if (headerElement.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                body.style.maxHeight = '0';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        document.querySelectorAll('.cv-card-header').forEach(header => {
+            header.addEventListener('mouseenter', function () {
+                if (!this.classList.contains('active')) {
+                    this.style.backgroundColor = 'rgba(255, 90, 95, 0.05)';
+                }
+            });
+            header.addEventListener('mouseleave', function () {
+                if (!this.classList.contains('active')) {
+                    this.style.backgroundColor = 'transparent';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

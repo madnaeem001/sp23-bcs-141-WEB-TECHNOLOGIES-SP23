@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="body">
+    <%- include('partials/header') %>
+
+    <div class="container mt-5 mb-5">
+        <h1 class="mb-4">Checkout Form</h1>
+        <form id="checkoutForm" novalidate>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h5 class="mb-3 mt-4">Personal Information</h5>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="John Doe">
+                        <div class="invalid-feedback">Full name is required and must be at least 3 characters.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com">
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="1234567890">
+                        <div class="invalid-feedback">Phone must be digits only, at least 10 digits.</div>
+                    </div>
+
+                    <h5 class="mb-3 mt-4">Address Information</h5>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="123 Main St">
+                        <div class="invalid-feedback">Address is required.</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" name="city" placeholder="New York">
+                            <div class="invalid-feedback">City is required.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="postalCode" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="10001">
+                            <div class="invalid-feedback">Postal code must be 4-6 numeric digits.</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" id="country" name="country">
+                            <option value="">-- Select Country --</option>
+                            <option value="USA">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a country.</div>
+                    </div>
+
+                    <h5 class="mb-3 mt-4">Payment Method</h5>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="cardPayment" value="card">
+                            <label class="form-check-label" for="cardPayment">Credit/Debit Card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypalPayment" value="paypal">
+                            <label class="form-check-label" for="paypalPayment">PayPal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="bankPayment" value="bank">
+                            <label class="form-check-label" for="bankPayment">Bank Transfer</label>
+                        </div>
+                        <div class="invalid-feedback d-block">Please select a payment method.</div>
+                    </div>
+
+                    <div id="cardFields" class="card-fields d-none">
+                        <h6 class="mb-3">Card Details</h6>
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Cardholder Name</label>
+                            <input type="text" class="form-control" id="cardName" name="cardName" placeholder="John Doe">
+                            <div class="invalid-feedback">Cardholder name is required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                            <div class="invalid-feedback">Card number must be 16 digits.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cardExpiry" class="form-label">Expiry (MM/YY)</label>
+                                <input type="text" class="form-control" id="cardExpiry" name="cardExpiry" placeholder="12/25">
+                                <div class="invalid-feedback">Expiry must be in MM/YY format.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cardCVV" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cardCVV" name="cardCVV" placeholder="123">
+                                <div class="invalid-feedback">CVV must be 3 digits.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="termsCheckbox" name="termsCheckbox">
+                            <label class="form-check-label" for="termsCheckbox">I agree to the Terms & Conditions</label>
+                        </div>
+                        <div class="invalid-feedback d-block">You must agree to the terms and conditions.</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Submit Order</button>
+                        <button type="reset" class="btn btn-secondary btn-lg ms-2">Clear Form</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="order-summary">
+                        <h5>Order Summary</h5>
+                        <div class="summary-item d-flex justify-content-between">
+                            <span>Subtotal:</span>
+                            <span>$99.99</span>
+                        </div>
+                        <div class="summary-item d-flex justify-content-between">
+                            <span>Shipping:</span>
+                            <span>$10.00</span>
+                        </div>
+                        <div class="summary-item d-flex justify-content-between">
+                            <span>Tax:</span>
+                            <span>$8.79</span>
+                        </div>
+                        <hr>
+                        <div class="summary-total d-flex justify-content-between">
+                            <strong>Total:</strong>
+                            <strong>$118.78</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/checkout.js"></script>
+
+    <%- include('partials/footer') %>
+
+</body>
+
+</html>

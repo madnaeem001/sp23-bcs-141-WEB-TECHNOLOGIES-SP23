@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin - Orders</title>
+    <link rel="stylesheet" href="/css/admin.css">
+  </head>
+  <body>
+  <%- include('./partials/header') %>
+    <main style="padding:20px;">
+      <h1>Orders Management</h1>
+      
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>Email</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Order Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (orders && orders.length) { %>
+            <% orders.forEach(function(order){ %>
+              <tr>
+                <td><%= order._id.toString().slice(-8) %></td>
+                <td><%= order.customerName %></td>
+                <td><%= order.email %></td>
+                <td>$<%= order.totalAmount.toFixed(2) %></td>
+                <td>
+                  <span class="status-badge status-<%= order.status.toLowerCase() %>">
+                    <%= order.status %>
+                  </span>
+                </td>
+                <td><%= new Date(order.createdAt).toLocaleDateString() %></td>
+                <td>
+                  <% if (order.status === 'Pending') { %>
+                    <form style="display:inline" method="post" action="/admin/orders/<%= order._id %>/confirm">
+                      <button class="btn small success" type="submit">Confirm</button>
+                    </form>
+                    <form style="display:inline" method="post" action="/admin/orders/<%= order._id %>/cancel" onsubmit="return confirm('Cancel this order?');">
+                      <button class="btn small danger" type="submit">Cancel</button>
+                    </form>
+                  <% } else if (order.status === 'Confirmed') { %>
+                    <form style="display:inline" method="post" action="/admin/orders/<%= order._id %>/cancel" onsubmit="return confirm('Cancel this order?');">
+                      <button class="btn small danger" type="submit">Cancel</button>
+                    </form>
+                  <% } else { %>
+                    <span style="color:#999;">No actions available</span>
+                  <% } %>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr><td colspan="7">No orders found</td></tr>
+          <% } %>
+        </tbody>
+      </table>
+    </main>
+  <%- include('./partials/footer') %>
+  </body>
+</html>

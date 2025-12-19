@@ -1,0 +1,41 @@
+body { font-family: Arial, Helvetica, sans-serif; background: #fafafa; color: #222; }
+.btn { display:inline-block; padding:8px 12px; background:#1572e8; color:#fff; border-radius:4px; text-decoration:none; }
+.btn.small{ padding:4px 8px; font-size:13px }
+.btn.danger{ background:#d9534f }
+.admin-table{ width:100%; border-collapse:collapse; background:#fff }
+.admin-table th, .admin-table td{ padding:10px; border-bottom:1px solid #eee }
+.form-row{ margin-bottom:10px }
+.form-row label{ display:block; font-weight:600; margin-bottom:4px }
+.form-row input, .form-row textarea{ width:100%; padding:8px; border:1px solid #ddd; border-radius:4px }
+/* Status badges for orders */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.status-confirmed {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-cancelled {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn.success {
+  background-color: #28a745;
+}
+
+.btn.success:hover {
+  background-color: #218838;
+}

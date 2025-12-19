@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your cart is empty</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body">
+  <%- include('partials/header') %>
+  <div class="container mt-5 mb-5">
+    <h1>Your cart is empty</h1>
+    <p>It looks like you don't have any items in your cart yet. Please browse our <a href="/products">products</a> and add items before checking out.</p>
+    <a class="btn btn-primary" href="/products">Browse products</a>
+  </div>
+  <%- include('partials/footer') %>
+</body>
+</html>

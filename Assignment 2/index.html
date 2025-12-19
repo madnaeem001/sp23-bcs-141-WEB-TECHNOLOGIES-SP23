@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD App</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">CRUD App (Posts)</h1>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="text-center my-3 d-none">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Toast for messages -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Notification</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" id="toast-body"></div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="postForm" class="mb-4">
+      <input type="hidden" id="postId">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" required>
+      </div>
+      <div class="mb-3">
+        <label for="body" class="form-label">Body</label>
+        <textarea class="form-control" id="body" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+    </form>
+
+    <!-- Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="postList"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const API_URL = 'https://jsonplaceholder.typicode.com/posts';
+    let posts = [];
+
+    // Show toast notification (Bootstrap 5 toast)
+    function showToast(message, type = 'success') {
+      $('#toast-body').text(message);
+      $('#toast')
+        .removeClass('bg-danger bg-success')
+        .addClass(type === 'error' ? 'bg-danger' : 'bg-success');
+
+      const toastEl = document.getElementById('toast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+
+    // Show loading spinner
+    function showLoading() {
+      $('#loading').removeClass('d-none');
+    }
+
+    // Hide loading spinner
+    function hideLoading() {
+      $('#loading').addClass('d-none');
+    }
+
+    // Load all posts (initial Read)
+    function loadPosts() {
+      showLoading();
+      $.get(API_URL, function(data) {
+        posts = data;               // store all posts locally
+        renderPosts();              // render into table
+        hideLoading();
+      }).fail(function() {
+        showToast('Failed to load posts', 'error');
+        hideLoading();
+      });
+    }
+
+    // Render posts in table
+    function renderPosts() {
+      const tbody = $('#postList');
+      tbody.empty();
+      posts.forEach(post => {
+        tbody.append(`
+          <tr>
+            <td>${post.id}</td>
+            <td>${post.title}</td>
+            <td>${post.body}</td>
+            <td>
+              <button class="btn btn-warning btn-sm editBtn" data-id="${post.id}">Edit</button>
+              <button class="btn btn-danger btn-sm deleteBtn" data-id="${post.id}">Delete</button>
+            </td>
+          </tr>
+        `);
+      });
+    }
+
+    // Create new post (C)
+    function createPost(postData) {
+      $.ajax({
+        url: API_URL,
+        method: 'POST',
+        data: postData,
+        beforeSend: showLoading,
+        success: function(response) {
+          hideLoading();
+          // JSONPlaceholder returns the created object with a fake id (e.g. 101) [web:1][web:41]
+          posts.unshift(response);   // add new post at top
+          renderPosts();             // update table
+          $('#postForm')[0].reset();
+          showToast('Post created');
+        },
+        error: function() {
+          hideLoading();
+          showToast('Failed to create post', 'error');
+        }
+      });
+    }
+
+    // Update post (U)
+    function updatePost(id, postData) {
+      $.ajax({
+        url: `${API_URL}/${id}`,
+        method: 'PUT',
+        data: postData,
+        beforeSend: showLoading,
+        success: function(response) {
+          hideLoading();
+          // Find and update locally
+          const index = posts.findIndex(p => p.id == id);
+          if (index !== -1) {
+            // merge existing + response
+            posts[index] = { ...posts[index], ...response };
+          }
+          renderPosts();
+          $('#postForm')[0].reset();
+          $('#postId').val('');
+          showToast('Post updated');
+        },
+        error: function() {
+          hideLoading();
+          showToast('Failed to update post', 'error');
+        }
+      });
+    }
+
+    // Delete post (D)
+    function deletePost(id) {
+      $.ajax({
+        url: `${API_URL}/${id}`,
+        method: 'DELETE',
+        beforeSend: showLoading,
+        success: function() {
+          hideLoading();
+          // Remove from local array
+          posts = posts.filter(p => p.id != id);
+          renderPosts();
+          showToast('Post deleted');
+        },
+        error: function() {
+          hideLoading();
+          showToast('Failed to delete post', 'error');
+        }
+      });
+    }
+
+    // Handle form submission (Create/Update)
+    $('#postForm').on('submit', function(e) {
+      e.preventDefault();
+      const id = $('#postId').val();
+      const title = $('#title').val();
+      const body = $('#body').val();
+
+      const postData = { title, body };
+
+      if (id) {
+        // Update existing post
+        updatePost(id, postData);
+      } else {
+        // Create new post
+        createPost(postData);
+      }
+    });
+
+    // Reset form
+    $('#resetBtn').on('click', function() {
+      $('#postForm')[0].reset();
+      $('#postId').val('');
+    });
+
+    // Edit post: prefill form
+    $(document).on('click', '.editBtn', function() {
+      const id = $(this).data('id');
+      const post = posts.find(p => p.id == id);
+      if (!post) return;
+      $('#postId').val(post.id);
+      $('#title').val(post.title);
+      $('#body').val(post.body);
+    });
+
+    // Delete post: confirm then delete
+    $(document).on('click', '.deleteBtn', function() {
+      const id = $(this).data('id');
+      if (confirm('Are you sure you want to delete this post?')) {
+        deletePost(id);
+      }
+    });
+
+    // Initial load (R)
+    loadPosts();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

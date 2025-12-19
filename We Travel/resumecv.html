@@ -5,282 +5,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal CV - BeTravel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body class="body">
 
-    
-        <div class="topbar">
-            <div class="topbar_left" style="width: 1128.4px;">
-                <div class="logo" style="background-color: #fff;">
-                    <span id="logo" data-height="60" data-padding="15" class="retina" style="background-color: #fff;">
-                        <a href="index.html" style="background-color: #fff;"><img src="./images/retina-travel.png"
-                                alt="BeTravel Logo" style="background-color: #fff;" height="37px"></a>
-                    </span>
-                </div>
-
-                <div class="menu_wrapper">
-                    <ul class="menu_top">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="resumecv.html">CV</a></li>
-                        <li><a href="insurances.html">Insurances</a></li>
-                        <li><a href="helpcenter.html">Help Center</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        
-                    </ul>
-                </div>
+    <!-- HEADER -->
+    <div class="topbar">
+        <div class="topbar_left" style="width: 1128.4px;">
+            <div class="logo" style="background-color: #fff;">
+                <span id="logo" data-height="60" data-padding="15" class="retina" style="background-color: #fff;">
+                    <a href="index.html" style="background-color: #fff;"><img src="./images/retina-travel.png"
+                            alt="BeTravel Logo" style="background-color: #fff;" height="37px"></a>
+                </span>
             </div>
-            <div class="topbar_right">
-
+            <div class="menu_wrapper">
+                <ul class="menu_top">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resumecv.html" class="active">My CV</a></li>
+                    <li><a href="insurances.html">Insurances</a></li>
+                    <li><a href="helpcenter.html">Help Center</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-    
+        <div class="topbar_right"></div>
+    </div>
 
     <!-- MAIN CONTENT -->
-    <main class="cv-main-container">
-        <div class="container py-5">
-            <!-- Page Title -->
-            <div class="cv-header mb-5">
-                <h1 class="cv-title">My Professional CV</h1>
-                <p class="cv-subtitle">Explore my professional journey and skills</p>
+    <main class="cv-main-wrapper">
+        <div class="cv-page-header">
+            <h1 class="stylish_h2 cv-main-title">My Professional CV</h1>
+            <p class="cv-subtitle-text">Explore my professional journey and expertise</p>
+        </div>
+        <div class="cv-sections-container">
+            <!-- Personal Information Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-user"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Personal Information</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Name:</span>
+                        <span class="cv-info-value">Mudassar Naeem</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Email:</span>
+                        <span class="cv-info-value"><a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a></span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Phone:</span>
+                        <span class="cv-info-value">+92 329 1630470</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Location:</span>
+                        <span class="cv-info-value">Lahore, Pakistan</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Professional Summary:</span>
+                        <span class="cv-info-value cv-summary-text">
+                          Dedicated Data anlayst and computer science student with passion for creating innovative digital solutions and exploring modern techs.
+                        </span>
+                    </div>
+                </div>
             </div>
 
-            <!-- CV Content -->
-            <div class="cv-container">
-                <!-- Personal Information Section -->
-                <div class="cv-section">
-                    <div class="cv-section-heading" data-toggle="personal">
-                        <span class="section-icon"><i class="fas fa-user"></i></span>
-                        <h2 class="section-title">Personal Information</h2>
-                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            <!-- Education Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-graduation-cap"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Education</h2>
                     </div>
-                    <div class="cv-section-content personal-content">
-                        <div class="content-item">
-                            <span class="label">Name:</span>
-                            <span class="value">Your Full Name</span>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-education-item">
+                        <div class="cv-education-header">
+                            <h3 class="cv-degree-title">Bachelor of Science in Computer Science</h3>
+                            <span class="cv-year-badge">2023 - Present</span>
                         </div>
-                        <div class="content-item">
-                            <span class="label">Email:</span>
-                            <span class="value"><a
-                                    href="mailto:your.email@example.com">your.email@example.com</a></span>
+                        <p class="cv-institution-name">COMSATS University Islamabad - Lahore Campus</p>
+                        <p class="cv-description">Currently pursuing degree with focus on AI and web-based implementation, and software engineering principles.</p>
+                    </div>
+                    <div class="cv-education-item">
+                        <div class="cv-education-header">
+                            <h3 class="cv-degree-title">Intermediate (F.Sc) Pre-Medical</h3>
+                            <span class="cv-year-badge">2020 - 2022</span>
                         </div>
-                        <div class="content-item">
-                            <span class="label">Phone:</span>
-                            <span class="value">+92 300 1234567</span>
+                        <p class="cv-institution-name">Aspire Group of Colleges</p>
+                        <p class="cv-description">Completed intermediate education with strong logical thinking.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-cogs"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Skills</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Web Technologies</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">HTML5</span>
+                            <span class="cv-skill-item">CSS3</span>
+                            <span class="cv-skill-item">Bootstrap</span>
+                            <span class="cv-skill-item">Responsive Design</span>
+                            <span class="cv-skill-item">jQuery</span>
                         </div>
-                        <div class="content-item">
-                            <span class="label">Location:</span>
-                            <span class="value">Karachi, Pakistan</span>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Programming Languages and libraries</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Python</span>
+                            <span class="cv-skill-item">NASM</span>
+                            <span class="cv-skill-item">TASM</span>
+                            <span class="cv-skill-item">HTML</span>
+                            <span class="cv-skill-item">CSS</span>
+                            <span class="cv-skill-item">Java</span>
+                            <span class="cv-skill-item">C++</span>
+                            <span class="cv-skill-item">PowerBI</span>
+                            <span class="cv-skill-item">NumPY</span>
+                            <span class="cv-skill-item">Pandas</span>
                         </div>
-                        <div class="content-item">
-                            <span class="label">Professional Summary:</span>
-                            <span class="value">Dedicated web developer and computer science student with passion for
-                                creating innovative digital solutions and exploring modern web technologies.</span>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Tools & Platforms</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Zapier</span>
+                            <span class="cv-skill-item">VS Code</span>
+                            <span class="cv-skill-item">n8n Automation</span>
+                            <span class="cv-skill-item">Slack</span>
+                            <span class="cv-skill-item">scikit-learn</span>
+                            <span class="cv-skill-item">AI Tools</span>
+                        </div>
+                    </div>
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Soft Skills</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">Problem Solving</span>
+                            <span class="cv-skill-item">Communication</span>
+                            <span class="cv-skill-item">Team Collaboration</span>
+                            <span class="cv-skill-item">Project Management</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Education Section -->
-                <div class="cv-section">
-                    <div class="cv-section-heading" data-toggle="education">
-                        <span class="section-icon"><i class="fas fa-graduation-cap"></i></span>
-                        <h2 class="section-title">Education</h2>
-                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            <!-- Experience / Projects Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-briefcase"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Experience / Projects</h2>
                     </div>
-                    <div class="cv-section-content education-content">
-                        <div class="education-item">
-                            <div class="education-header">
-                                <h3 class="degree-title">Bachelor of Science in Computer Science</h3>
-                                <span class="degree-date">2024 - Present</span>
-                            </div>
-                            <p class="institution">FAST-NUCES, Karachi</p>
-                            <p class="description">Currently pursuing degree with focus on web technologies, full-stack
-                                development, and software engineering principles.</p>
-                        </div>
-
-                        <div class="education-item">
-                            <div class="education-header">
-                                <h3 class="degree-title">Intermediate (F.Sc) Pre-Engineering</h3>
-                                <span class="degree-date">2022 - 2024</span>
-                            </div>
-                            <p class="institution">Government College, Karachi</p>
-                            <p class="description">Completed intermediate education with strong foundation in
-                                mathematics and sciences.</p>
-                        </div>
-                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
                 </div>
-
-                <!-- Skills Section -->
-                <div class="cv-section">
-                    <div class="cv-section-heading" data-toggle="skills">
-                        <span class="section-icon"><i class="fas fa-cogs"></i></span>
-                        <h2 class="section-title">Skills</h2>
-                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                <div class="cv-card-body">
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">Marketing & Branding Agency</h3>
+                            <span class="cv-year-badge">2025</span>
+                        </div>
+                        <p class="cv-role-title">Founder & Developer</p>
+                        <p class="cv-description">
+                            Established and managed a full-service marketing and branding agency specializing in social media presence, AI-generated content, and client outreach for ecommerce businesses.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Developed AI-generated CGI video content for product marketing</li>
+                            <li>Created social media strategies for client engagement</li>
+                            <li>Built responsive landing pages and portfolio sites</li>
+                        </ul>
                     </div>
-                    <div class="cv-section-content skills-content">
-                        <div class="skills-category">
-                            <h4 class="skill-category-title">Web Technologies</h4>
-                            <div class="skills-grid">
-                                <div class="skill-badge">HTML5</div>
-                                <div class="skill-badge">CSS3</div>
-                                <div class="skill-badge">JavaScript</div>
-                                <div class="skill-badge">Bootstrap</div>
-                                <div class="skill-badge">Responsive Design</div>
-                                <div class="skill-badge">jQuery</div>
-                            </div>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">HostelEase - Flutter Mobile App</h3>
+                            <span class="cv-year-badge">2025</span>
                         </div>
-
-                        <div class="skills-category">
-                            <h4 class="skill-category-title">Programming Languages</h4>
-                            <div class="skills-grid">
-                                <div class="skill-badge">Python</div>
-                                <div class="skill-badge">JavaScript</div>
-                                <div class="skill-badge">Java</div>
-                                <div class="skill-badge">C++</div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4 class="skill-category-title">Tools & Platforms</h4>
-                            <div class="skills-grid">
-                                <div class="skill-badge">Git/GitHub</div>
-                                <div class="skill-badge">VS Code</div>
-                                <div class="skill-badge">n8n Automation</div>
-                                <div class="skill-badge">Firebase</div>
-                                <div class="skill-badge">AI Tools</div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4 class="skill-category-title">Soft Skills</h4>
-                            <div class="skills-grid">
-                                <div class="skill-badge">Problem Solving</div>
-                                <div class="skill-badge">Communication</div>
-                                <div class="skill-badge">Team Collaboration</div>
-                                <div class="skill-badge">Project Management</div>
-                            </div>
-                        </div>
+                        <p class="cv-role-title">Full-Stack Developer</p>
+                        <p class="cv-description">
+                            Developed a comprehensive hostel management application with Firebase and SQLite backend, enabling roommate grouping, expense tracking, and complaint logging.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Implemented expense splitting functionality</li>
+                            <li>Created mess menu reminder system</li>
+                            <li>Built complaint logging and tracking features</li>
+                        </ul>
                     </div>
-                </div>
-
-                <!-- Experience / Projects Section -->
-                <div class="cv-section">
-                    <div class="cv-section-heading" data-toggle="experience">
-                        <span class="section-icon"><i class="fas fa-briefcase"></i></span>
-                        <h2 class="section-title">Experience / Projects</h2>
-                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="cv-section-content experience-content">
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h3 class="project-title">Marketing & Branding Agency</h3>
-                                <span class="project-date">2025</span>
-                            </div>
-                            <p class="project-role">Founder & Developer</p>
-                            <p class="description">Established and managed a full-service marketing and branding agency
-                                specializing in social media presence, AI-generated content, and client outreach for
-                                ecommerce businesses on Instagram.</p>
-                            <ul class="achievements">
-                                <li>Developed AI-generated CGI video content for product marketing</li>
-                                <li>Created social media strategies for client engagement</li>
-                                <li>Built responsive landing pages and portfolio sites</li>
-                            </ul>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">BeTravel - E-Tourism Website</h3>
+                            <span class="cv-year-badge">2025</span>
                         </div>
-
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h3 class="project-title">HostelEase - Flutter Mobile App</h3>
-                                <span class="project-date">2025</span>
-                            </div>
-                            <p class="project-role">Full-Stack Developer</p>
-                            <p class="description">Developed a comprehensive hostel management application with Firebase
-                                and SQLite backend, enabling roommate grouping, expense tracking, and complaint logging.
+                        <p class="cv-role-title">Web Developer</p>
+                        <p class="cv-description">
+                            Built a comprehensive travel website with responsive design, multiple service pages, and integrated checkout system.
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Designed responsive layout for all device sizes</li>
+                            <li>Created dynamic navigation and menu systems</li>
+                            <li>Implemented form validation and checkout flow</li>
+                        </ul>
+                    </div>
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">Nairma - AR</h3>
+                            <span class="cv-year-badge">2025 - Ongoing</span>
+                        </div>
+                        <p class="cv-role-title">Data Analyst and Developer</p>
+                        <p class="cv-description">
+                            <p class="cv-description">
+                                Contributed as a data analytics learner at Nairma, handling small tasks such as cleaning and modelling datasets using Python (pandas, NumPy), preparing AR asset metadata, and assisting with simple REST endpoints. Supported AR integration efforts and helped build Power BI reports to track basic engagement metrics under senior guidance.
                             </p>
-                            <ul class="achievements">
-                                <li>Implemented expense splitting functionality</li>
-                                <li>Created mess menu reminder system</li>
-                                <li>Built complaint logging and tracking features</li>
-                            </ul>
-                        </div>
 
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h3 class="project-title">BeTravel - E-Tourism Website</h3>
-                                <span class="project-date">2025</span>
-                            </div>
-                            <p class="project-role">Web Developer</p>
-                            <p class="description">Built a comprehensive travel website with responsive design, multiple
-                                service pages, and integrated checkout system. Applied Bootstrap and custom CSS for
-                                consistent branding.</p>
-                            <ul class="achievements">
-                                <li>Designed responsive layout for all device sizes</li>
-                                <li>Created dynamic navigation and menu systems</li>
-                                <li>Implemented form validation and checkout flow</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h3 class="project-title">CRUD Web Application</h3>
-                                <span class="project-date">2025</span>
-                            </div>
-                            <p class="project-role">Developer</p>
-                            <p class="description">Built a single-page application with full CRUD functionality using
-                                HTML, Bootstrap 5, and jQuery AJAX with fake REST API integration.</p>
-                            <ul class="achievements">
-                                <li>Implemented dynamic data operations without page reload</li>
-                                <li>Created loading states and error handling</li>
-                                <li>Designed intuitive user interface with Bootstrap</li>
-                            </ul>
-                        </div>
+                        </p>
+                        <ul class="cv-achievements-list">
+                            <li>Learned data cleaning and preprocessing techniques</li>
+                            <li>Got a chance to implement basic data visualization using Power BI</li>
+                            <li>Assisted in preparing AR asset metadata</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-                <!-- Contact Information Section -->
-                <div class="cv-section">
-                    <div class="cv-section-heading" data-toggle="contact">
-                        <span class="section-icon"><i class="fas fa-envelope"></i></span>
-                        <h2 class="section-title">Contact Information</h2>
-                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-envelope"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Contact Information</h2>
                     </div>
-                    <div class="cv-section-content contact-content">
-                        <div class="contact-method">
-                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <a href="mailto:your.email@example.com">your.email@example.com</a>
-                            </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-envelope"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Email</h4>
+                            <a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a>
                         </div>
-
-                        <div class="contact-method">
-                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                            <div class="contact-details">
-                                <h4>Phone</h4>
-                                <a href="tel:+923001234567">+92 300 1234567</a>
-                            </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-phone"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Phone</h4>
+                            <a href="tel:+923001234567">+92 329 1630470</a>
                         </div>
-
-                        <div class="contact-method">
-                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Karachi, Pakistan</p>
-                            </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-map-marker-alt"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Location</h4>
+                            <p>Lahore, Pakistan</p>
                         </div>
-
-                        <div class="contact-method">
-                            <span class="contact-icon"><i class="fas fa-globe"></i></span>
-                            <div class="contact-details">
-                                <h4>Website & Social</h4>
-                                <div class="social-links">
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                                </div>
+                    </div>
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-globe"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Website & Social</h4>
+                            <div class="cv-social-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -293,12 +289,9 @@
     <footer class="custom-footer">
         <div class="footer-top">
             <div class="footer-col left">
-                <h2><span style="color:#b9cbe6;">Be</span><span style="font-family:Courgette;">travel</span></h2>
-                <p style="color: #ccc; margin-top: 10px;">We love who we are and we are very proud to be the part of
-                    your
-                    business</p>
-                <p style="color: #ccc; font-size: 13px; margin-bottom: 10px;">Curabitur sit amet magna quam. Praesent in
-                    libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque quis.</p>
+                <img src="./images/footer_logo.png" alt="">
+                <p style="color: #ccc; margin-top: 10px;">We love who we are and we are very proud to be the part of your business</p>
+                <p style="color: #ccc; font-size: 13px; margin-bottom: 10px;">Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque quis.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-google-plus"></i></a>
@@ -318,9 +311,7 @@
             </div>
             <div class="footer-col large">
                 <h3>10 years of experience</h3>
-                <p>Suspendisse elementum mauris lectus. Suspendisse potenti. Praesent id ipsum lorem. Ut ac erat sed
-                    nisi
-                    aliquam molestie vitae et lectus! Duis at enim magna. Nulla in ex purus:</p>
+                <p>Suspendisse elementum mauris lectus. Suspendisse potenti. Praesent id ipsum lorem. Ut ac erat sed nisi aliquam molestie vitae et lectus! Duis at enim magna. Nulla in ex purus:</p>
                 <div class="footer-list-row">
                     <ul>
                         <li><a href="#" style="color: #ccc;">Velit mauris</a></li>
@@ -342,42 +333,36 @@
         </div>
     </footer>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.cv-section-heading');
+        function toggleSection(headerElement) {
+            const cardSection = headerElement.closest('.cv-card-section');
+            const body = cardSection.querySelector('.cv-card-body');
+            const arrow = headerElement.querySelector('.cv-toggle-arrow i');
 
-            sections.forEach(section => {
-                section.addEventListener('click', function () {
-                    const content = this.nextElementSibling;
-                    const toggleIcon = this.querySelector('.toggle-icon i');
+            headerElement.classList.toggle('active');
 
-                    
-                    this.classList.toggle('active');
-                    content.classList.toggle('show');
+            if (headerElement.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                body.style.maxHeight = '0';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
 
-                    
-                    if (this.classList.contains('active')) {
-                        toggleIcon.style.transform = 'rotate(180deg)';
-                    } else {
-                        toggleIcon.style.transform = 'rotate(0deg)';
-                    }
-                });
-
-                
-                section.addEventListener('mouseenter', function () {
-                    this.style.backgroundColor = 'rgba(185, 203, 230, 0.1)';
-                });
-
-                section.addEventListener('mouseleave', function () {
+        document.querySelectorAll('.cv-card-header').forEach(header => {
+            header.addEventListener('mouseenter', function () {
+                if (!this.classList.contains('active')) {
+                    this.style.backgroundColor = 'rgba(255, 90, 95, 0.05)';
+                }
+            });
+            header.addEventListener('mouseleave', function () {
+                if (!this.classList.contains('active')) {
                     this.style.backgroundColor = 'transparent';
-                });
+                }
             });
         });
     </script>
-</body>
 
+</body>
 </html>

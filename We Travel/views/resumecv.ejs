@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal CV - BeTravel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="body">
+
+    <%- include('partials/header') %>
+
+    <main class="cv-main-wrapper">
+        <div class="cv-page-header">
+            <h1 class="stylish_h2 cv-main-title">My Professional CV</h1>
+            <p class="cv-subtitle-text">Explore my professional journey and expertise</p>
+        </div>
+        <div class="cv-sections-container">
+            <!-- Personal Information Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-user"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Personal Information</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Name:</span>
+                        <span class="cv-info-value">Mudassar Naeem</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Email:</span>
+                        <span class="cv-info-value"><a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a></span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Phone:</span>
+                        <span class="cv-info-value">+92 329 1630470</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Location:</span>
+                        <span class="cv-info-value">Lahore, Pakistan</span>
+                    </div>
+                    <div class="cv-info-row">
+                        <span class="cv-info-label">Professional Summary:</span>
+                        <span class="cv-info-value cv-summary-text">Dedicated Data anlayst and computer science student with passion for creating innovative digital solutions and exploring modern techs.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-graduation-cap"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Education</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-education-item">
+                        <div class="cv-education-header">
+                            <h3 class="cv-degree-title">Bachelor of Science in Computer Science</h3>
+                            <span class="cv-year-badge">2023 - Present</span>
+                        </div>
+                        <p class="cv-institution-name">COMSATS University Islamabad - Lahore Campus</p>
+                        <p class="cv-description">Currently pursuing degree with focus on AI and web-based implementation, and software engineering principles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-cogs"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Skills</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-skills-category">
+                        <h4 class="cv-skill-category-title">Web Technologies</h4>
+                        <div class="cv-skills-list">
+                            <span class="cv-skill-item">HTML5</span>
+                            <span class="cv-skill-item">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience / Projects Section -->
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-briefcase"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Experience / Projects</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-experience-item">
+                        <div class="cv-experience-header">
+                            <h3 class="cv-project-title">Marketing & Branding Agency</h3>
+                            <span class="cv-year-badge">2025</span>
+                        </div>
+                        <p class="cv-role-title">Founder & Developer</p>
+                        <p class="cv-description">Established and managed a full-service marketing and branding agency specializing in social media presence, AI-generated content, and client outreach for ecommerce businesses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-card-section">
+                <div class="cv-card-header" onclick="toggleSection(this)">
+                    <div class="cv-header-content">
+                        <span class="cv-icon"><i class="fa fa-envelope"></i></span>
+                        <h2 class="stylish_h4 cv-section-title">Contact Information</h2>
+                    </div>
+                    <span class="cv-toggle-arrow"><i class="fa fa-chevron-down"></i></span>
+                </div>
+                <div class="cv-card-body">
+                    <div class="cv-contact-item">
+                        <span class="cv-contact-icon"><i class="fa fa-envelope"></i></span>
+                        <div class="cv-contact-info">
+                            <h4 class="cv-contact-title">Email</h4>
+                            <a href="mailto:your.email@example.com">mudassarnaeem19@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        function toggleSection(headerElement) {
+            const cardSection = headerElement.closest('.cv-card-section');
+            const body = cardSection.querySelector('.cv-card-body');
+            const arrow = headerElement.querySelector('.cv-toggle-arrow i');
+
+            headerElement.classList.toggle('active');
+
+            if (headerElement.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                body.style.maxHeight = '0';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+
+</body>
+</html>

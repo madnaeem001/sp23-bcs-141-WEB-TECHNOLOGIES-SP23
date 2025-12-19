@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - We Travel</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body">
+
+  <%- include('partials/header') %>
+
+  <div class="container" style="padding: 40px;">
+    <h2>Products</h2>
+
+    <div id="filters" style="margin-bottom: 20px; display:flex; gap:12px; align-items:center;">
+      <label>Category:
+        <select id="filter-category">
+          <option value="">All</option>
+          <option value="beach">Beach</option>
+          <option value="historical">Historical</option>
+          <option value="island">Island</option>
+          <option value="city">City</option>
+          <option value="party">Party</option>
+          <option value="adventure">Adventure</option>
+        </select>
+      </label>
+      <label>Min price: <input id="filter-min" type="number" placeholder="0" style="width:100px"></label>
+      <label>Max price: <input id="filter-max" type="number" placeholder="99999" style="width:100px"></label>
+      <button id="apply-filters">Apply</button>
+      <button id="clear-filters">Clear</button>
+    </div>
+
+    <div id="product-list" style="display:grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap:20px;"></div>
+
+    <div id="pagination" style="margin-top:20px; display:flex; gap:8px; align-items:center;"></div>
+  </div>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/products.js"></script>
+</body>
+</html>
